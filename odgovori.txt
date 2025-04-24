@@ -1,2 +1,61 @@
 Odgovori zadaće DZ 3.1 - HTTP (2025): 
-	
+
+
+2.1. Pristup resursima:
+a) Pokreće li vaš preglednik HTTP verziju 1.0 ili 1.1? 
+		ODGOVOR: Moj preglednik koristi verziju HTTP 1.1.
+
+b) Koja je verzija HTTP-a poslužitelja pokrenuta kad pristupite npr sa sum.ba?
+		ODGOVOR: Kada pristupamo domeni sum.ba verzija HTTP-a poslužitelja je također HTTP 1.1.
+
+c) Koje jezike (ako postoje) vaš preglednik pokazuje da može prihvatiti na poslužitelju?
+		ODGOVOR: accept-language:		hr-HR,hr;q=0.9,en-US;q=0.8,en;q=0.7
+			Iz ovog vidimo da moj preglednik na poslužitelju  može prihvatiti hrvatski i engleski jezik,a accept-language se nalazi u Request Headers.
+
+d) Koja je IP adresa vašeg računala? A koja je IP adresa sum.ba?
+		ODGOVOR: IP adresa mog računala je: 192.168.0.115 ,provjereno pomoću command prompt-a i naredbe ipconfig.
+			IP adresa sum.ba: Address:  212.39.111.33 ,provjereno pomoću command prompt-a i naredbe nslookup sum.ba.
+
+e) Kada je HTML datoteka koju dohvaćate zadnji put modificirana na poslužitelju?
+		ODGOVOR: last-modified:	Thu, 03 Dec 1992
+
+f) Koliko se bajtova sadržaja vraća u vaš preglednik?
+		ODGOVOR: Content-Length: 2217
+
+g) Koji softver/web poslužitelj  poslužje web stranicu na server,navedite odakle vidite?
+		ODGOVOR: server:		Apache
+			Ovo vidim iz Response Headers.
+
+h) Koje jezike vaš web preglednik može prihvatiti?
+		ODGOVOR: accept-language:		hr-HR,hr;q=0.9,en-US;q=0.8,en;q=0.7
+			To su: hr-HR : Hrvatski najveći prioritet,
+				hr   : Opći Hrvatski,
+				en-Us: Engleski,
+				en   : Opći Engleski.
+
+2.2 Pristupite sljedećim resursima te za svaki resurs napišite HTTP odgovor koji dobijete (bez tijela), te za svaki resurs odgovorite:
+		1. RESURS(http://web-admin.sum.ba/api/storage/pravilnik_mobilnost_1552858671_80.pdf):
+    			a) kojem MIME formatu resursa se radi:   
+				Content-Type: text/html; charset=iso-8859-1
+    			b) kolika je veličina resursa (u byte-ima)
+				-
+    			c) koja je verzija HTTP poslužitelja
+				HTTP/1.1 301 Moved Permanently
+		
+		2. RESURS(https://eucenje.sum.ba/moodle/pluginfile.php/1/core_admin/logocompact/300x300/1698654623/Logo%20sumarum.png):
+			a) kojem MIME formatu resursa se radi:   
+				Content-Type: image/png
+    			b) kolika je veličina resursa (u byte-ima)
+				Content-Length: 15684
+    			c) koja je verzija HTTP poslužitelja
+				HTTP/1.1 200 OK
+
+		3. RESURS(https://mirrors.edge.kernel.org/linuxmint/stable/10/sha256sum.txt):
+			a) kojem MIME formatu resursa se radi:   
+				Content-Type: text/html; charset=utf-8
+    			b) kolika je veličina resursa (u byte-ima)
+				Content-Length: 1946    			
+			c) koja je verzija HTTP poslužitelja
+				HTTP/1.1 404 Not Found		
+
+		
